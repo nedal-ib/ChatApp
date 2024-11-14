@@ -30,7 +30,6 @@ func EncryptMessage(pubKey *rsa.PublicKey, message []byte) (string, error) {
 }
 
 func DecryptMessage(privKey *rsa.PrivateKey, encryptedMessage string) ([]byte, error) {
-	// Decode the Base64 message
 	decodedMessage, err := base64.StdEncoding.DecodeString(encryptedMessage)
 	if err != nil {
 		return nil, err
